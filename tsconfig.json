@@ -1,0 +1,19 @@
+{
+  "extends": "@tsconfig/node18",
+  "compilerOptions": {
+    "target": "ES2020",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "lib": ["DOM"],
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "outDir": "cjs",
+    "declarationDir": "types"
+  },
+  "include": ["src/**/*.ts"]
+}

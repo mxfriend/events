@@ -1,0 +1,60 @@
+{
+  "name": "@mxfriend/events",
+  "description": "A simple object-based EventEmitter with typed and async events",
+  "license": "MIT",
+  "homepage": "https://github.com/mxfriend/events",
+  "repository": {
+    "type": "vcs",
+    "url": "https://github.com/mxfriend/events.git"
+  },
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Kadera",
+    "email": "me@subsonic.cz",
+    "url": "https://github.com/jahudka"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "cjs/index.js",
+  "module": "esm/index.mjs",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./esm/index.mjs",
+      "default": "./cjs/index.js"
+    }
+  },
+  "files": [
+    "cjs",
+    "esm",
+    "types"
+  ],
+  "scripts": {
+    "postinstall": "node .husky/install.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^18.19.41",
+    "eslint": "^8.57.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.1",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.17.0"
+  },
+  "lint-staged": {
+    "*.json": [
+      "prettier --write"
+    ],
+    "src/**/*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
