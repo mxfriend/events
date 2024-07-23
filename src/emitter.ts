@@ -77,6 +77,7 @@ export class EventEmitter<Events extends Event> {
 
     if (handlers.default && !event.isDefaultPrevented()) {
       handlers.default(event);
+      event.setHandled();
     }
 
     return event;
@@ -93,6 +94,7 @@ export class EventEmitter<Events extends Event> {
 
     if (handlers.default && !event.isDefaultPrevented()) {
       await handlers.default(event);
+      event.setHandled();
     }
 
     return event.resolve();

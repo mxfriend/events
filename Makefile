@@ -1,12 +1,12 @@
 .PHONY: default
-default: dist
+default: cjs
 
 .PHONY: rebuild
-rebuild: clean dist
+rebuild: clean cjs
 
 .PHONY: clean
 clean:
-	rm -rf dist
+	rm -rf cjs types
 
 node_modules:
 	npm ci
@@ -21,5 +21,5 @@ pretty: node_modules
 	node_modules/.bin/eslint --fix src esm
 	node_modules/.bin/prettier --write src esm
 
-dist: node_modules
+cjs: node_modules
 	node_modules/.bin/tsc
