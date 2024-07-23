@@ -7,7 +7,7 @@
     "type": "vcs",
     "url": "git+https://github.com/mxfriend/events.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Dan Kadera",
     "email": "me@subsonic.cz",
