@@ -5,7 +5,7 @@
   "homepage": "https://github.com/mxfriend/events",
   "repository": {
     "type": "vcs",
-    "url": "https://github.com/mxfriend/events.git"
+    "url": "git+https://github.com/mxfriend/events.git"
   },
   "version": "1.0.0",
   "author": {
